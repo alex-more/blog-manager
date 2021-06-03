@@ -5,7 +5,10 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog', {
+// Connect to MongoDB Atlas
+const dbURI = 'mongodb+srv://morax:e0qmWtnVjIaYMqt7@blogcluster.wc0km.mongodb.net/blog-db?retryWrites=true&w=majority'
+
+mongoose.connect(dbURI, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
 
